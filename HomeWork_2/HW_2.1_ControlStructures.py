@@ -1,9 +1,9 @@
 # <<<<<<<<<<Define data
-year_of_birth = input("insert year of birth ")
+year_of_birth = int(input("insert year of birth "))
 current_year = 2020
-age = current_year - int(year_of_birth) #define the variable "age"
+age = current_year - year_of_birth #define the variable "age"
 # <<<<<<<<<<Logical layer
-if int(year_of_birth) < 1900 or int(year_of_birth) > current_year:
+if year_of_birth < 1900 or year_of_birth > current_year:
     print("The year of bird is not valid")
 else:
 # <<<<<<<<<<Output Data
