@@ -4,7 +4,7 @@ current_year = 2020
 age = current_year - year_of_birth #define the variable "age"
 # <<<<<<<<<<Logical layer
 if year_of_birth < 1900 or year_of_birth > current_year:
-    print("The year of bird is not valid")
+    print("The year of birth is not valid")
 else:
 # <<<<<<<<<<Output Data
     if age < 4:
