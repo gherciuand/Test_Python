@@ -1,5 +1,5 @@
 #==================Drow the square================
-def DrowScuare(size):
+def DrowSquare(size):
     n=0
     while n < size:
         print("* "*size)
@@ -15,4 +15,4 @@ def InputInt(value):
         except ValueError:
             print("Ooops, wrong value. Please enter only integer number:")
 
-DrowScuare(InputInt("Size of square is:\n"))
+DrowSquare(InputInt("Size of square is:\n"))
