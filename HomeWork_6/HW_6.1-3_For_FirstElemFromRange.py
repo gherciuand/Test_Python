@@ -12,7 +12,7 @@ def print_line (text):
     print("*"*10, text, "*"*10)
     print("_"*100, "\n")
 
-#----------Define the globan variables
+#----------Define the global variables
 start_value = InputInt("Start value:")
 end_value = InputInt("End value:?")
 print_line("Diapazon of values")
