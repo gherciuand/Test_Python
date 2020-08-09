@@ -56,8 +56,8 @@ def edit():
     else:
         pass
 
-#-------Functia add() adauga elementa insa mai necesita imbunatatire
-#               (verificare daca toate elementele au fost introduse)
+#-------Functia add() adauga elemente insa mai necesita imbunatatire
+#               (verificare daca toate elementele au fost introduse corect)
 def add():
     print("!" * 10, "TOATE CAMPURILE SUNT OBLIGATORII", "!" * 10)
     new_basm = input("Nume basm: <").title()
