@@ -32,5 +32,3 @@ if path.exists(menu_file) and path.exists(order_file):
     output_order.write(f'\nTotal price:{"-"*27}  {sum(total_price):>4} MDL')
 else:
     print(f'You can NOT place the order, some files meesing')
-
-
