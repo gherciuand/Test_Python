@@ -1,0 +1,9 @@
+Your order is:
+
+Peperoni        - quantity 2  pcs, price  170 MDL
+Salad Greek     - quantity 1  pcs, price   60 MDL
+Soup Zama       - quantity 2  pcs, price   90 MDL
+Pibs&chips      - quantity 1  pcs, price   95 MDL
+Fries potatoes  - quantity 1  pcs, price   30 MDL
+
+Total price:---------------------------   445 MDL
