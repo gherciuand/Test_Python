@@ -2,7 +2,7 @@ from os import path
 
 menu_file = "menu.txt"
 order_file = "order.txt"
-output_file = "Total_order.txt"
+output_file = "Output_order.txt"
 
 if path.exists(menu_file) and path.exists(order_file):
     print (f'You can place the order')
