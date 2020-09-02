@@ -22,17 +22,18 @@ def get_data(day):
 
     if data['success'] is False:
         print('CANNOT ACCESS THE DATE')
+        return None
     else:
         return data
 
 def show_rates(day):
     data = get_data(day)
-    if data['success'] is False:
-        print('CANNOT ACCESS THE DATE')
-    else:
+    if data is not None:
         print(f'EUR = {round(data["rates"]["USD"], 3):>7} USD\n'
-              f'EUR = {round(data["rates"]["MDL"], 3):>7} MDL\n'
-              f'EUR = {round(data["rates"]["RUB"], 3):>7} RUB\n')
+          f'EUR = {round(data["rates"]["MDL"], 3):>7} MDL\n'
+          f'EUR = {round(data["rates"]["RUB"], 3):>7} RUB\n')
+    else:
+        print('Please enter valid date')
 
 def convertor(sum_val):
     data = get_data(str(dt.date.today()))
