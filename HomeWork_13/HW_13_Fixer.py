@@ -37,15 +37,17 @@ def show_rates(day):
 def convertor(sum_val):
     data = get_data(str(dt.date.today()))
     try:
-        from_val = data['rates'][input('enter the code currency "from"  ').upper()]
+        cod_val_from = input('enter the code currency "from"  ').upper()
+        from_val = data['rates'][cod_val_from]
     except KeyError:
         from_val = 1
     try:
-        to_val = data['rates'][input('enter the code currency "to"  ').upper()]
+        cod_val_to = input('enter the code currency "to"  ').upper()
+        to_val = data['rates'][cod_val_to]
     except KeyError:
         to_val = 1
-    echiv = sum_val / (from_val / to_val)
-    print(echiv)
+    echiv = round(sum_val / (from_val / to_val),2)
+    print(f'For {sum_val} {cod_val_from}  you will get {echiv} {cod_val_to}')
 
 def evolution(start, end, currency):
     count = 0
