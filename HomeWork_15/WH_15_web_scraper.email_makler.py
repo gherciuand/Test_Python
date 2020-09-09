@@ -19,13 +19,13 @@ def scanOneAdMaklerPage(target_url):
     phones = document('#item_phones').text().replace(" ", "")
     cod_email = document('.hlist').find('a').attr('data-cfemail')
     email = decodeEmail(cod_email)
-    #image = document('.main-image').find('img').attr('src')
+    # image = document('.main-image').find('img').attr('src')
     print(user_id)
     print(phones)
     print(email)
     return {
         'title': hading,
-        'user' : user_id,
+        'user': user_id,
         'email': email,
         'phone': phones
     }
@@ -42,13 +42,15 @@ def scanOneCatMaklerPage(target_url):
             url = pq(link).attr('href')
             adds.append(scanOneAdMaklerPage(prefix + url))
         except:
-           pass
+            pass
     return adds
 
-    # print(links_to_ads)
 
-num_pages = 165
+num_pages = 1
 index = '?page='
 for n in range(num_pages):
-    adds = scanOneCatMaklerPage(cat_target+index+str(n))
+    adds = scanOneCatMaklerPage(cat_target + index + str(n))
     n += 1
+    file_name = f'./subscribers.json'
+    file = open(file_name, 'w', encoding='utf-8')
+    json.dump(adds, file, indent=2, ensure_ascii=False)
