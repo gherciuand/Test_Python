@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping List</title>
+</head>
+<body>
+    <h1>Shopping List </h1>
+
+    {% if products|length > 0 %}
+
+        <ol>
+            {% for p in products %}
+                <li style="color: {% if not p.done %} red {% endif%};">
+                <input type="checkbox" {% if p.done %} checked {% endif%}/> 
+                    <img src="{{p.image}}" style="width: 50px">
+                    {{p.name}}
+                </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h2>The list is empti</h2>
+
+    {% endif %}
+
+</body>
+</html>
